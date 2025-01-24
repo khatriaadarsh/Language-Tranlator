@@ -1,35 +1,36 @@
-let textInput = document.querySelector(".input-box");
-let textOutput = document.querySelector(".output-box");
-let languageSelector = document.querySelector(".language-list");
-let translateBtn = document.querySelector(".translate-btn");
+let textInput = document.querySelector("#inputText");
+let textOutput = document.querySelector("#outputText");
+let languageSelector = document.querySelector("#targlanguage");
+let translateBtn = document.querySelector("#translateBtn");
+let sourceLang = "en"; // Replace with the source language code
 
-translateBtn.classList.add("disabled");
+translateBtn.disabled = true;
 
-translateBtn.addEventListener("click", () => {
-  if (!translateBtn.classList.contains("disabled")) {
-    translateText(textInput, languageSelector);
-  }
-});
 textInput.addEventListener("input", () => {
-  if (textInput.value.trim() === "") {
-    translateBtn.classList.add("disabled");
-  } else {
+  if (textInput.value !== "" && languageSelector.value !== "") {
     translateBtn.classList.remove("disabled");
+    translateBtn.disabled = false;
+
+  } else {
+    translateBtn.classList.add("disabled");
+    translateBtn.disabled = true;
   }
 });
-async function translateText(inputText, languageSelector) {
+
+async function translateText(inputText, sourceLang, targetLang) {
+  let langPair = `${sourceLang}|${targetLang}`;
   const url = "https://www.apertium.org/apy/translate"; // Replace with the correct API endpoint URL
   const response = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
-      q: inputText.value,
-      langpair: "en|es",
+      q: inputText,
+      langpair: langPair,
     }),
   });
 
   let data = await response.json();
-  if (data.responseStatus === 200) {
+  if (response.ok) {
     textOutput.value = data.responseData.translatedText;
   } else {
     textOutput.value = "Error translating text. Please try again.";

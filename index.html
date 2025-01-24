@@ -23,15 +23,9 @@
     </nav>
     <main class="home-section">
       <!-- Input-text -->
-      <textarea
-        name="inputText"
-        id="inputText"
-        rows="22"
-        cols="50"
-        class="input-box"
-      ></textarea>
+      <textarea name="inputText" id="inputText" rows="22" cols="50"></textarea>
       <!-- Available Languages -->
-      <select name="language" id="language" class="language-list">
+      <select name="language" id="targlanguage">
         <option value="en">English</option>
         <option value="es">Spanish</option>
         <option value="fr">French</option>
@@ -43,14 +37,13 @@
         <option value="ru">Russian</option>
         <option value="zh">Chinese</option>
       </select>
-      <button class="translate-btn">Translate</button>
+      <button id="translateBtn">Translate</button>
       <!-- Output-text -->
       <textarea
         name="outputText"
         id="outputText"
         rows="22"
         cols="50"
-        class="output-box"
       ></textarea>
     </main>
     <script src="./script.js"></script>
