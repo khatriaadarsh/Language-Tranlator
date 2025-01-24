@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  position: fixed;
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+  color: white;
+}
+
+.logo h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: white;
+  cursor: pointer;
+}
+
+.logo h4:hover {
+  color: gray;
+}
+
+nav h3 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: gray;
+}
+
+nav .btn {
+  display: flex;
+  gap: 20px;
+}
+nav .btn button {
+  padding: 10px 20px;
+  background-color: #3b3a3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+nav .btn button:hover {
+  background-color: #5b5a5a;
+}
+
+.home-section {
+  background-color: gray;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.home-section .input-box {
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 25px;
+  font-size: 16px;
+}
+.home-section .output-box {
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 25px;
+  font-size: 16px;
+}
+textarea {
+  padding: 15px;
+  outline: none;
+  border: none;
+  overflow: auto;
+  resize: none;
+}
+
+textarea:focus {
+  border: 1px solid;
+}
+
+.translate-btn {
+  padding: 10px 20px;
+  background-color: #3b3a3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.translate-btn:hover {
+  background-color: #5b5a5a;
+}
+
+.translate-btn.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.language-list {
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none;
+}
