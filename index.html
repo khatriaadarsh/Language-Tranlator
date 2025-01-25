@@ -9,7 +9,7 @@
   <body>
     <nav>
       <div class="logo">
-        <h4>Langauge</h4>
+        <h4>Language</h4>
       </div>
       <ul>
         <li><a href="#">Home</a></li>
@@ -21,11 +21,12 @@
         <button class="log-in">Log In</button>
       </div>
     </nav>
-    <main class="home-section">
+    <main id="home-section">
       <!-- Input-text -->
       <textarea name="inputText" id="inputText" rows="22" cols="50"></textarea>
-      <!-- Available Languages -->
-      <select name="language" id="targlanguage">
+      <!-- Source Languages -->
+      <select name="language" id="sourceLanguage">
+        <option value="" disabled selected>Select a language</option>
         <option value="en">English</option>
         <option value="es">Spanish</option>
         <option value="fr">French</option>
@@ -37,7 +38,23 @@
         <option value="ru">Russian</option>
         <option value="zh">Chinese</option>
       </select>
+
       <button id="translateBtn">Translate</button>
+
+      <!-- Target Languages -->
+      <select name="language" id="targetLanguage">
+        <option value="" disabled selected>Select a language</option>
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="it">Italian</option>
+        <option value="ja">Japanese</option>
+        <option value="ko">Korean</option>
+        <option value="pt">Portuguese</option>
+        <option value="ru">Russian</option>
+        <option value="zh">Chinese</option>
+      </select>
       <!-- Output-text -->
       <textarea
         name="outputText"

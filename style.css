@@ -65,35 +65,36 @@ nav .btn button:hover {
   background-color: #5b5a5a;
 }
 
-.home-section {
+#home-section {
   background-color: gray;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }
 
-.home-section #inputText {
+#home-section #inputText {
   width: 30vw;
   height: 60vh;
   background-color: white;
   border-radius: 25px;
   font-size: 16px;
-}
-.home-section #outputText {
-  width: 30vw;
-  height: 60vh;
-  background-color: white;
-  border-radius: 25px;
-  font-size: 16px;
-}
-textarea {
-  padding: 15px;
+  padding: 30px;
   outline: none;
   border: none;
   overflow: auto;
-  resize: none;
+}
+#home-section #outputText {
+  width: 30vw;
+  height: 60vh;
+  background-color: white;
+  border-radius: 25px;
+  font-size: 16px;
+  padding: 30px;
+  outline: none;
+  border: none;
+  overflow: auto;
 }
 
 textarea:focus {
@@ -113,14 +114,21 @@ textarea:focus {
   background-color: #5b5a5a;
 }
 
-#translateBtn.disabled {
+/* #translateBtn.disabled {
   pointer-events: none;
   opacity: 0.5;
   background-color: #d3d3d3; /* Light gray background color */
-  color: #a9a9a9; /* Dark gray text color */
+/* color: #a9a9a9; Dark gray text color */
+/* } */
+
+#sourceLanguage {
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  outline: none;
 }
 
-#targlanguage {
+#targetLanguage {
   padding: 10px 15px;
   font-weight: 700;
   border-radius: 10px;
